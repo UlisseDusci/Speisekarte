@@ -1,0 +1,146 @@
+/* Farben (colors) – change these to restyle the whole menu */
+:root {
+  --rot: #b3261e;
+  --gruen: #2e7d32;
+  --creme: #fdf6ec;
+  --text: #2b2118;
+  --grau: #6b5e52;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--creme);
+  color: var(--text);
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+}
+
+/* Kopfbereich (header) */
+header {
+  background: var(--rot);
+  color: white;
+  text-align: center;
+  padding: 40px 16px 30px;
+}
+
+.flagge {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.flagge span {
+  width: 24px;
+  height: 6px;
+}
+
+.flagge span:nth-child(1) { background: var(--gruen); }
+.flagge span:nth-child(2) { background: white; }
+.flagge span:nth-child(3) { background: #e8483f; }
+
+h1, h2 {
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.untertitel {
+  margin: 6px 0 0;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Navigation – sticks to the top while scrolling */
+nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  display: flex;
+  overflow-x: auto;
+  gap: 4px;
+  padding: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  flex-shrink: 0;
+  color: var(--rot);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+nav a:hover {
+  background: var(--creme);
+}
+
+/* Inhalt (content) */
+main, footer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+section {
+  padding-top: 24px;
+  scroll-margin-top: 50px; /* so the sticky nav doesn't cover headings */
+}
+
+h2 {
+  color: var(--rot);
+  border-bottom: 2px solid var(--rot);
+  padding-bottom: 4px;
+}
+
+.gericht {
+  margin-bottom: 16px;
+}
+
+/* name on the left, price on the right */
+.zeile {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.gericht h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.preis {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.gericht p {
+  margin: 2px 0 0;
+  color: var(--grau);
+  font-size: 0.95rem;
+}
+
+/* Fußbereich (footer) */
+footer {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.legende {
+  margin-top: 32px;
+  color: var(--grau);
+}
+
+.danke {
+  margin-top: 24px;
+  font-style: italic;
+  color: var(--gruen);
+}
